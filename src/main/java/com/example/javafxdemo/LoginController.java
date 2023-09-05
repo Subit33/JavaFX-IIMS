@@ -6,13 +6,13 @@ import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
 
 public class LoginController {
+    LoginModel loginModel;
     @FXML
     private TextField userEmail;
     @FXML
     private TextField userPassword;
     @FXML
     private Label resultLabel;
-    LoginModel loginModel;
 
     public void login(ActionEvent event){
         String email = userEmail.getText();
