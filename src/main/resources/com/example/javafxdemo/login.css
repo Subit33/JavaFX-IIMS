@@ -1,0 +1,38 @@
+VBox {
+    -fx-background-color: #f9f9f9;
+    -fx-spacing: 10;
+    -fx-padding: 20;
+}
+
+Label {
+    -fx-font-size: 14px;
+}
+
+TextField, PasswordField {
+    -fx-font-size: 14px;
+    -fx-padding: 8;
+    -fx-background-color: #fff;
+    -fx-border-color: #ccc;
+    -fx-border-radius: 5;
+    -fx-border-width: 1;
+}
+
+Button {
+    -fx-font-size: 12px;
+    -fx-padding: 8 16;
+    -fx-background-color: #4CAF50; /* Minimal green color */
+    -fx-text-fill: white;
+    -fx-border-radius: 3;
+    -fx-border-width: 0;
+}
+
+#resultLabel {
+    -fx-font-size: 16px;
+}
+
+.login-success{
+ -fx-text-fill: #2ba32b;
+}
+.login-error{
+    -fx-text-fill: #bb4646;
+}

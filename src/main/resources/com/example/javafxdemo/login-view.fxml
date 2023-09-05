@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="400.0" minWidth="400.0" prefHeight="400.0" prefWidth="400.0" spacing="10.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.javafxdemo.LoginController" alignment="CENTER">
+    <children>
+        <Label fx:id="resultLabel" text="" />
+        <HBox alignment="CENTER" spacing="10">
+            <Label text="UserName" />
+            <TextField fx:id="userEmail" />
+        </HBox>
+        <HBox alignment="CENTER" spacing="10">
+            <Label text="Password" />
+            <PasswordField fx:id="userPassword" />
+        </HBox>
+        <Button contentDisplay="CENTER" mnemonicParsing="false" onAction="#login" text="Log In" />
+    </children>
+</VBox>
