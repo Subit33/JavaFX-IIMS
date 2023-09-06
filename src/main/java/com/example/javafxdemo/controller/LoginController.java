@@ -1,8 +1,10 @@
-package com.example.javafxdemo;
+package com.example.javafxdemo.controller;
 
+import com.example.javafxdemo.model.LoginModel;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.Label;
+import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
 
 public class LoginController {
@@ -10,7 +12,7 @@ public class LoginController {
     @FXML
     private TextField userEmail;
     @FXML
-    private TextField userPassword;
+    private PasswordField userPassword;
     @FXML
     private Label resultLabel;
 
