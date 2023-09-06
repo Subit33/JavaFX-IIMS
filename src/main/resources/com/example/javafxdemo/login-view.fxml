@@ -6,7 +6,7 @@
 
 <VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="400.0" minWidth="400.0" prefHeight="400.0" prefWidth="400.0" spacing="10.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.javafxdemo.controller.LoginController" alignment="CENTER">
     <children>
-        <Label fx:id="resultLabel" text="" />
+        <Label fx:id="resultLabel" text=""  styleClass="test"/>
         <HBox alignment="CENTER" spacing="10">
             <Label text="UserName" />
             <TextField fx:id="userEmail" />

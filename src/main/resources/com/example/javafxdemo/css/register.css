@@ -1,0 +1,51 @@
+.main-container {
+    -fx-background-color: #f0f0f0;
+    -fx-padding: 20px;
+    -fx-spacing: 10px;
+    -fx-alignment: center;
+}
+
+.register-label {
+    -fx-font-size: 24px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #333;
+}
+
+.result-label {
+    -fx-font-size: 14px;
+    -fx-text-fill: #FF5733;
+}
+
+.text-input {
+    -fx-pref-width: 200px;
+    -fx-pref-height: 30px;
+    -fx-font-size: 14px;
+    -fx-background-color: #fff;
+    -fx-border-width: 1px;
+    -fx-border-color: #ccc;
+    -fx-border-radius: 3px;
+}
+
+.combo-box {
+    -fx-pref-width: 200px;
+    -fx-pref-height: 30px;
+    -fx-font-size: 14px;
+    -fx-background-color: #fff;
+    -fx-border-width: 1px;
+    -fx-border-color: #ccc;
+    -fx-border-radius: 3px;
+}
+
+.register-button {
+    -fx-pref-width: 100px;
+    -fx-pref-height: 40px;
+    -fx-font-size: 16px;
+    -fx-background-color: #FF5733;
+    -fx-text-fill: white;
+    -fx-border-width: 0;
+    -fx-cursor: hand;
+}
+
+.register-button:hover {
+    -fx-background-color: #FF875D;
+}

@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import org.controlsfx.control.textfield.TextFields?>
+
+<?import javafx.collections.FXCollections?>
+<?import java.lang.String?>
+<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="600.0" minWidth="400.0" prefHeight="600.0" prefWidth="400.0" spacing="20.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.javafxdemo.controller.RegisterController" styleClass="main-container" alignment="CENTER">
+    <children>
+        <Label text="Register" styleClass="label h2" />
+        <Label fx:id="resultLabel" text="" styleClass="label" />
+        <HBox alignment="CENTER" spacing="10">
+            <Label text="Name" styleClass="label" />
+            <TextField fx:id="userName" styleClass="form-control" />
+        </HBox>
+        <HBox alignment="CENTER" spacing="10">
+            <Label text="Birth Year" styleClass="label" />
+            <TextField fx:id="userBirthYear" styleClass="form-control" />
+        </HBox>
+        <HBox alignment="CENTER" spacing="10">
+            <Label text="Gender" styleClass="label" />
+            <ComboBox fx:id="userGender" styleClass="form-control">
+                <items>
+                    <FXCollections fx:factory="observableArrayList">
+                        <String fx:value="Male" />
+                        <String fx:value="Female" />
+                        <String fx:value="Other" />
+                    </FXCollections>
+                </items>
+            </ComboBox>
+        </HBox>
+        <HBox alignment="CENTER" spacing="10">
+            <Label text="Nationality" styleClass="label" />
+            <TextField fx:id="userNationality" styleClass="form-control" />
+        </HBox>
+        <HBox alignment="CENTER" spacing="10">
+            <Label text="Password" styleClass="label" />
+            <PasswordField fx:id="userPassword" styleClass="form-control" />
+        </HBox>
+        <Button text="Register" onAction="#register" styleClass="btn btn-primary" />
+    </children>
+</VBox>
