@@ -37,8 +37,6 @@
             <Label styleClass="label" text="Password" />
             <PasswordField fx:id="userPassword" styleClass="form-control" />
         </HBox>
-        <TextArea />
-
         <Button onAction="#register" styleClass="btn btn-primary" text="Register" />
     </children>
 </VBox>

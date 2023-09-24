@@ -19,8 +19,6 @@
             <Label text="Password" />
             <PasswordField fx:id="userPassword" />
         </HBox>
-        <TextField fx:id="textField" prefWidth="200.0" prefHeight="40.0" />
-        <Label text="Enter text here" mouseTransparent="true" />
         <Button contentDisplay="CENTER" mnemonicParsing="false" onAction="#login" text="Log In" />
     </children>
 </VBox>
