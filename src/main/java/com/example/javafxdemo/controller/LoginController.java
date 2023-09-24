@@ -6,11 +6,14 @@ import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.Label;
 import javafx.scene.control.PasswordField;
+import javafx.scene.control.TextArea;
 import javafx.scene.control.TextField;
 
 import java.io.IOException;
 
 public class LoginController {
+
+    TextArea textArea;
     LoginModel loginModel;
     @FXML
     private TextField userEmail;
@@ -27,6 +30,7 @@ public class LoginController {
 
     public LoginController(Application application){
         this.application = application;
+
     }
 
     public void setApplication(Application application){
@@ -35,7 +39,6 @@ public class LoginController {
     public void login(ActionEvent event) throws IOException {
         String email = userEmail.getText();
         String password = userPassword.getText();
-
         if (loginModel.loginAuthentication(email, password)){
             resultLabel.setText("Login Successful!!");
             resultLabel.getStyleClass().clear();
