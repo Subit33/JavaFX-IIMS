@@ -1,19 +1,47 @@
 package com.example.javafxdemo.controller;
 
+import com.opencsv.CSVWriter;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
-import javafx.scene.control.Button;
-import javafx.scene.control.ComboBox;
-import javafx.scene.control.Label;
+import javafx.scene.control.*;
+
+import java.io.FileWriter;
+import java.io.IOException;
 
 public class RegisterController {
     @FXML
-    private ComboBox userGender;
+    private TextField userName;
     @FXML
-    private Label resultLabel;
-
+    private TextField email;
+    @FXML
+    private DatePicker dateOfBirth;
+    @FXML
+    private ComboBox<String> userGender;
+    @FXML
+    private TextField userNationality;
+    @FXML
+    private PasswordField userPassword;
     public void register(ActionEvent event){
-        String selectedGender = (String) userGender.getValue();
-        resultLabel.setText(selectedGender);
+        String name = userName.getText();
+        String userEmail = email.getText();
+        String birthYear = dateOfBirth.getValue().toString();
+        String gender = userGender.getValue();
+        String nationality = userNationality.getText();
+        String password = userPassword.getText();
+
+        String pathToCSV = "src/main/resources/userData.csv";
+        try {
+            FileWriter fileWriter = new FileWriter(pathToCSV, true);
+            CSVWriter csvWriter = new CSVWriter(fileWriter);
+
+            String[] csvData = {name, userEmail, birthYear, gender, nationality, password};
+            csvWriter.writeNext(csvData);
+            csvWriter.close();
+        }
+        catch (IOException e){
+            e.printStackTrace();
+        }
+
     }
 }
+

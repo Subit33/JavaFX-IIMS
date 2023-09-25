@@ -29,7 +29,7 @@ public class Application extends javafx.application.Application {
 
     public void registerScene() throws IOException {
         FXMLLoader fxmlLoader = new FXMLLoader(Application.class.getResource("register-view.fxml"));
-        Scene scene = new Scene(fxmlLoader.load(), 320, 240);
+        Scene scene = new Scene(fxmlLoader.load(), 320, 400);
         scene.getStylesheets().add(getClass().getResource("css/login.css").toExternalForm());
         stage.setTitle("Register!");
         stage.setScene(scene);

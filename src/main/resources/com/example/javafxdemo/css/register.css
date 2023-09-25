@@ -1,51 +1,40 @@
+/* Your CSS file */
 .main-container {
-    -fx-background-color: #f0f0f0;
-    -fx-padding: 20px;
-    -fx-spacing: 10px;
-    -fx-alignment: center;
+    -fx-background-color: #f0f0f0; /* Background color for the container */
+    -fx-padding: 20; /* Add padding for spacing */
 }
 
-.register-label {
+.h2-label {
     -fx-font-size: 24px;
     -fx-font-weight: bold;
-    -fx-text-fill: #333;
+    -fx-text-fill: #333; /* Dark gray text color */
 }
 
-.result-label {
+.input-label {
     -fx-font-size: 14px;
-    -fx-text-fill: #FF5733;
+    -fx-font-weight: bold;
+    -fx-text-fill: #666; /* Slightly lighter text color */
 }
 
-.text-input {
-    -fx-pref-width: 200px;
-    -fx-pref-height: 30px;
+.input-field {
     -fx-font-size: 14px;
-    -fx-background-color: #fff;
-    -fx-border-width: 1px;
-    -fx-border-color: #ccc;
-    -fx-border-radius: 3px;
+    -fx-padding: 5 10; /* Add some padding for input fields */
+    -fx-background-color: #fff; /* White background for input fields */
+    -fx-border-color: #ccc; /* Light gray border color */
+    -fx-border-width: 1;
+    -fx-border-radius: 5;
 }
 
-.combo-box {
-    -fx-pref-width: 200px;
-    -fx-pref-height: 30px;
-    -fx-font-size: 14px;
-    -fx-background-color: #fff;
-    -fx-border-width: 1px;
-    -fx-border-color: #ccc;
-    -fx-border-radius: 3px;
-}
-
-.register-button {
-    -fx-pref-width: 100px;
-    -fx-pref-height: 40px;
+.btn {
     -fx-font-size: 16px;
-    -fx-background-color: #FF5733;
-    -fx-text-fill: white;
-    -fx-border-width: 0;
-    -fx-cursor: hand;
+    -fx-text-fill: #fff; /* White text color for buttons */
+    -fx-background-color: #007bff; /* Blue background color for buttons */
 }
 
-.register-button:hover {
-    -fx-background-color: #FF875D;
+.btn:hover {
+    -fx-background-color: #0056b3; /* Darker blue color on hover */
+}
+
+.btn-primary {
+    -fx-background-color: #007bff; /* Blue background color for primary button */
 }

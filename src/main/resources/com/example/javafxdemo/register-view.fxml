@@ -1,25 +1,29 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import java.lang.*?>
 <?import javafx.collections.*?>
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
 
-<?import java.lang.String?>
-<VBox alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="600.0" minWidth="400.0" prefHeight="600.0" prefWidth="400.0" spacing="20.0" styleClass="main-container" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.javafxdemo.controller.RegisterController">
+<VBox alignment="CENTER" minHeight="600.0" minWidth="400.0" prefHeight="600.0" prefWidth="400.0" spacing="20.0" styleClass="main-container" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.javafxdemo.controller.RegisterController">
     <children>
-        <Label styleClass="label h2" text="Register" />
+        <Label styleClass="h2-label" text="Register" />
         <Label fx:id="resultLabel" styleClass="label" text="" />
         <HBox alignment="CENTER" spacing="10">
-            <Label styleClass="label" text="Name" />
-            <TextField fx:id="userName" styleClass="form-control" />
+            <Label styleClass="input-label" text="Name" />
+            <TextField fx:id="userName" styleClass="input-field" />
         </HBox>
         <HBox alignment="CENTER" spacing="10">
-            <Label styleClass="label" text="Birth Year" />
-            <TextField fx:id="userBirthYear" styleClass="form-control" />
+            <Label styleClass="input-label" text="Email" />
+            <TextField fx:id="email" styleClass="input-field" />
         </HBox>
         <HBox alignment="CENTER" spacing="10">
-            <Label styleClass="label" text="Gender" />
-            <ComboBox fx:id="userGender" promptText="---Select your gender---" styleClass="form-control">
+            <Label styleClass="input-label" text="Birth Year" />
+            <DatePicker fx:id="dateOfBirth" styleClass="input-field" />
+        </HBox>
+        <HBox alignment="CENTER" spacing="10">
+            <Label styleClass="input-label" text="Gender" />
+            <ComboBox fx:id="userGender" promptText="---Select your gender---" styleClass="input-field">
                 <items>
                     <FXCollections fx:factory="observableArrayList">
                         <String fx:value="Male" />
@@ -30,13 +34,13 @@
             </ComboBox>
         </HBox>
         <HBox alignment="CENTER" spacing="10">
-            <Label styleClass="label" text="Nationality" />
-            <TextField fx:id="userNationality" styleClass="form-control" />
+            <Label styleClass="input-label" text="Nationality" />
+            <TextField fx:id="userNationality" styleClass="input-field" />
         </HBox>
         <HBox alignment="CENTER" spacing="10">
-            <Label styleClass="label" text="Password" />
-            <PasswordField fx:id="userPassword" styleClass="form-control" />
+            <Label styleClass="input-label" text="Password" />
+            <PasswordField fx:id="userPassword" styleClass="input-field" />
         </HBox>
-        <Button onAction="#register" styleClass="btn btn-primary" text="Register" />
+        <Button fx:id="registerBtn" onAction="#register" styleClass="btn btn-primary" text="Register" />
     </children>
 </VBox>
