@@ -5,7 +5,11 @@
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
 
+<?import java.net.URL?>
 <VBox alignment="CENTER" minHeight="600.0" minWidth="400.0" prefHeight="600.0" prefWidth="400.0" spacing="20.0" styleClass="main-container" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.javafxdemo.controller.RegisterController">
+    <stylesheets>
+        <URL value="@css/register.css"/>
+    </stylesheets>
     <children>
         <Label styleClass="h2-label" text="Register" />
         <Label fx:id="resultLabel" styleClass="label" text="" />

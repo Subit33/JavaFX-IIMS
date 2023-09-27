@@ -28,8 +28,10 @@ public class RegisterController {
         String gender = userGender.getValue();
         String nationality = userNationality.getText();
         String password = userPassword.getText();
-
         String pathToCSV = "src/main/resources/userData.csv";
+        if (userEmail.isEmpty()){
+            email.getStyleClass().add("error-background");
+        }
         try {
             FileWriter fileWriter = new FileWriter(pathToCSV, true);
             CSVWriter csvWriter = new CSVWriter(fileWriter);

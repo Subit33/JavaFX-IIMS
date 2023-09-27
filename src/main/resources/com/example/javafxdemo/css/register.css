@@ -38,3 +38,6 @@
 .btn-primary {
     -fx-background-color: #007bff; /* Blue background color for primary button */
 }
+.error-background {
+    -fx-background-color: red;
+}
