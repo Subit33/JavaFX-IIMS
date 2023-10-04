@@ -30,9 +30,13 @@ TextField, PasswordField {
     -fx-font-size: 16px;
 }
 
+
 .login-success{
  -fx-text-fill: #2ba32b;
 }
 .login-error{
     -fx-text-fill: #bb4646;
+}
+.my_label{
+    -fx-background-color: red;
 }

@@ -3,7 +3,6 @@ package com.example.javafxdemo;
 import com.example.javafxdemo.controller.LoginController;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
-import javafx.scene.control.Button;
 import javafx.stage.Stage;
 import org.kordamp.bootstrapfx.BootstrapFX;
 
@@ -34,11 +33,13 @@ public class Application extends javafx.application.Application {
     public void registerScene() throws IOException {
         FXMLLoader fxmlLoader = new FXMLLoader(Application.class.getResource("register-view.fxml"));
         Scene scene = new Scene(fxmlLoader.load(), 320, 400);
+        scene.getStylesheets().add(BootstrapFX.bootstrapFXStylesheet());
         scene.getStylesheets().add(getClass().getResource("css/register.css").toExternalForm());
         stage.setTitle("Register!");
         stage.setScene(scene);
         stage.show();
     }
+
     public static void main(String[] args) {
         launch();
     }

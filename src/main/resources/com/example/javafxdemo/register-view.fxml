@@ -6,6 +6,7 @@
 <?import javafx.scene.layout.*?>
 
 <?import java.net.URL?>
+<?import javafx.scene.image.ImageView?>
 <VBox alignment="CENTER" minHeight="600.0" minWidth="400.0" prefHeight="600.0" prefWidth="400.0" spacing="20.0" styleClass="main-container" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.javafxdemo.controller.RegisterController">
     <stylesheets>
         <URL value="@css/register.css"/>
@@ -20,6 +21,7 @@
         <HBox alignment="CENTER" spacing="10">
             <Label styleClass="input-label" text="Email" />
             <TextField fx:id="email" styleClass="input-field" />
+            <Label fx:id="emailError"/>
         </HBox>
         <HBox alignment="CENTER" spacing="10">
             <Label styleClass="input-label" text="Birth Year" />
@@ -45,6 +47,13 @@
             <Label styleClass="input-label" text="Password" />
             <PasswordField fx:id="userPassword" styleClass="input-field" />
         </HBox>
-        <Button fx:id="registerBtn" onAction="#register" styleClass="btn btn-primary" text="Register" />
+        <Button fx:id="registerBtn" onAction="#register"
+                styleClass="btn btn-primary hello-btn" text="Register" />
     </children>
+    <HBox alignment="CENTER" spacing="10">
+        <Label styleClass="input-label" text="Profile Picture" />
+        <Button onAction="#uploadImage" styleClass="btn btn-primary" text="Upload Image" />
+    </HBox>
+    <ImageView fx:id="userImage" />
+
 </VBox>

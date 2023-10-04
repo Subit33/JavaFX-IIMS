@@ -8,6 +8,7 @@ module com.example.javafxdemo {
 
     requires opencsv;
 
+    requires jBCrypt;
     opens com.example.javafxdemo to javafx.fxml;
     exports com.example.javafxdemo;
     exports com.example.javafxdemo.controller;

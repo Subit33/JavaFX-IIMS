@@ -1,22 +1,18 @@
 package com.example.javafxdemo.controller;
 
 import com.example.javafxdemo.Application;
-import com.example.javafxdemo.model.LoginModel;
 import com.opencsv.CSVReader;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.Label;
 import javafx.scene.control.PasswordField;
-import javafx.scene.control.TextArea;
 import javafx.scene.control.TextField;
+import org.mindrot.jbcrypt.BCrypt;
 
 import java.io.FileReader;
 import java.io.IOException;
 
 public class LoginController {
-
-    TextArea textArea;
-    LoginModel loginModel;
     @FXML
     private TextField userEmail;
     @FXML
@@ -67,6 +63,10 @@ public class LoginController {
             e.printStackTrace();
         }
         return false;
+    }
+
+    public boolean passwordVerification(String storedHash, String password){
+        return BCrypt.checkpw(password, storedHash);
     }
 
 }

@@ -18,8 +18,8 @@
             <Label text="Password" />
             <PasswordField fx:id="userPassword" />
         </HBox>
-        <Button contentDisplay="CENTER"
-                styleClass="btn-primary"
+        <Label styleClass="my_label"/>
+        <Button contentDisplay="CENTER" styleClass="btn-primary"
                 mnemonicParsing="false" onAction="#login" text="Log In" />
     </children>
 </VBox>
