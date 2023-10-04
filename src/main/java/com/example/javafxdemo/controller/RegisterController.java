@@ -32,6 +32,8 @@ public class RegisterController {
     @FXML
     private ImageView userImage;
 
+    @FXML
+    private Label imageId;
     private String imagePath;
 
     public void register(ActionEvent event) {
@@ -55,21 +57,44 @@ public class RegisterController {
             String[] csvData = {name, userEmail, birthYear, gender, nationality, password, imagePath};
             csvWriter.writeNext(csvData);
             csvWriter.close();
+            clearFormElements();
         } catch (IOException e) {
             e.printStackTrace();
         }
     }
 
     public void uploadImage(ActionEvent event) {
+        // FileChooser class to choose files
         FileChooser fileChooser = new FileChooser();
+        // FileChooser ExtensionFilters to add filters to specific files only
         fileChooser.getExtensionFilters().add(new FileChooser.ExtensionFilter("Image Files", "*.png", "*.jpg", "*.jpeg", "*.gif"));
 
+        // File class to capture the selected image as a file
+        // File class has access to file details like file name, file location, file size,
+        // file url and so on...
         File selectedImage = fileChooser.showOpenDialog(null);
         if (selectedImage != null) {
-            Image image = new Image(selectedImage.toURI().toString());
-            userImage.setImage(image);
 
+            // Image class to process the url as an image
+            Image image = new Image(selectedImage.toURI().toString());
+            // Showing the name of the image after upload
+            imageId.setText(selectedImage.getName());
+            // Displaying the image after upload
+            userImage.setImage(image);
+            // Imagepath will later be added into csv which is a file uri
             imagePath = selectedImage.getPath();
         }
+    }
+
+    public void clearFormElements(){
+        userName.clear();
+        email.clear();
+        dateOfBirth.setValue(null);
+        userGender.getSelectionModel().clearSelection();
+        userPassword.clear();
+        userNationality.clear();
+        userImage.setImage(null);
+        imageId.setText("");
+
     }
 }

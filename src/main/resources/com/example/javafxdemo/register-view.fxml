@@ -51,7 +51,8 @@
                 styleClass="btn btn-primary hello-btn" text="Register" />
     </children>
     <HBox alignment="CENTER" spacing="10">
-        <Label styleClass="input-label" text="Profile Picture" />
+        <Label styleClass="input-label" text="Citizenship" />
+        <Label fx:id="imageId"/>
         <Button onAction="#uploadImage" styleClass="btn btn-primary" text="Upload Image" />
     </HBox>
     <ImageView fx:id="userImage" />
