@@ -1,5 +1,6 @@
 package com.example.javafxdemo.controller;
 
+import com.example.javafxdemo.Application;
 import com.opencsv.CSVWriter;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
@@ -32,11 +33,18 @@ public class RegisterController {
     @FXML
     private ImageView userImage;
 
+    private Application application;
+    private boolean isFormValid;
+
     @FXML
     private Label imageId;
     private String imagePath;
 
-    public void register(ActionEvent event) {
+    public void setApplication(Application application) {
+        this.application = application;
+    }
+
+    public void register(ActionEvent event) throws IOException {
         String name = userName.getText();
         String userEmail = email.getText();
         String birthYear = dateOfBirth.getValue().toString();
@@ -48,18 +56,25 @@ public class RegisterController {
         if (userEmail.isEmpty()) {
             emailError.setText("Email can't be empty");
             email.getStyleClass().add("error-background");
+            isFormValid = false;
+        }
+        else {
+            isFormValid = true;
         }
 
-        try {
-            FileWriter fileWriter = new FileWriter(pathToCSV, true);
-            CSVWriter csvWriter = new CSVWriter(fileWriter);
+        if (isFormValid) {
+            try {
+                FileWriter fileWriter = new FileWriter(pathToCSV, true);
+                CSVWriter csvWriter = new CSVWriter(fileWriter);
 
-            String[] csvData = {name, userEmail, birthYear, gender, nationality, password, imagePath};
-            csvWriter.writeNext(csvData);
-            csvWriter.close();
-            clearFormElements();
-        } catch (IOException e) {
-            e.printStackTrace();
+                String[] csvData = {name, userEmail, birthYear, gender, nationality, password, imagePath};
+                csvWriter.writeNext(csvData);
+                csvWriter.close();
+                clearFormElements();
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
+            application.loginScene();
         }
     }
 

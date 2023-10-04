@@ -22,15 +22,6 @@ public class LoginController {
 
     private Application application;
 
-    public LoginController() {
-
-    }
-
-    public LoginController(Application application) {
-        this.application = application;
-
-    }
-
     public void setApplication(Application application) {
         this.application = application;
     }

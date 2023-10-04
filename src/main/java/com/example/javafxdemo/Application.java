@@ -1,6 +1,7 @@
 package com.example.javafxdemo;
 
 import com.example.javafxdemo.controller.LoginController;
+import com.example.javafxdemo.controller.RegisterController;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
@@ -13,7 +14,7 @@ public class Application extends javafx.application.Application {
     @Override
     public void start(Stage stage) throws IOException {
         this.stage = stage;
-        loginScene();
+        registerScene();
     }
 
     public void loginScene() throws IOException {
@@ -38,6 +39,9 @@ public class Application extends javafx.application.Application {
         stage.setTitle("Register!");
         stage.setScene(scene);
         stage.show();
+
+        RegisterController registerController = fxmlLoader.getController();
+        registerController.setApplication(this);
     }
 
     public static void main(String[] args) {
